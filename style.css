@@ -92,6 +92,12 @@ main {
     border-radius: 32px;
     box-shadow: 0px 24px 32px #7c7c7c25;
 }
+.guardadoVacio {
+    background-image: url(img/buho1-01.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .nuevaEntradaContenedor {
     width: 75%;
@@ -208,5 +214,24 @@ main {
         height: auto;
         margin: auto;
         padding: 0 5px;
+    }
+
+    .botonEliminar, .botonDeCopiar {
+        width: 100px;
+        height: auto;
+        margin: 2px 4px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .contenedorDeAlertas {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50vh;
+        right: 20vw;
+    }
+    .guardadoVacio {
+        background-image: url(img/buho1-02-opacity-01.jpg);
     }
 }

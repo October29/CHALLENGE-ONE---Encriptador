@@ -1,9 +1,17 @@
 let mensajes = []; //mensajes a encriptar
 let mensajescodificados = []; //mensajes a desencriptar
 
+let guardadoPrincipal = document.querySelector('#guardadosPrincipal');
 const guardados = document.querySelector('#guadados-container');    //Declaracion - contenedor lateral para mensajes encriptados
 const botonEncriptar = document.querySelector('#boton-encriptar');  //Declaracion - boton de encriptado
 const botonDesencriptar = document.querySelector('#boton-desencriptar');//Declaacion - boton desencriptar
+
+if (mensajes == false) {
+    guardadoPrincipal.classList.add ('guardadoVacio');
+    alertText('#alert', 'No hay mensajes disponibles...');
+} else if (mensajes == true) {
+    
+}
 
 //Boton para ENCRIPTAR mensajes ingresados en el campo de texto
 botonEncriptar.onclick = function validar(event){
@@ -37,6 +45,7 @@ botonEncriptar.onclick = function validar(event){
 //Funcion para emitir textos desencriptados en la parte superior de la barra lateral
 function alertText(id, text) {
     let elementHtml = document.querySelector(id);
+    
     elementHtml.innerHTML = text;
 //Si no hay textos para mostrar desabilitar el area de texts desencriptados
     if (text == false){
@@ -74,6 +83,7 @@ function guardar() {
         return
     } else {
 //Contenedor para la nueva entrada con mensaje y boton eliminar/copiar
+        guardadoPrincipal.classList.remove ('guardadoVacio');
         nuevaEntradaContenedor.className = 'nuevaEntradaContenedor';
         guardados.appendChild(nuevaEntradaContenedor);
         limpiarTexto();
@@ -91,8 +101,12 @@ function guardar() {
     nuevaEntradaContenedor.appendChild(eliminar);
     eliminar.onclick = function eliminarEntrada (){
         nuevaEntradaContenedor.remove();
-        alertText('#alert', '');
         mensajes.pop();
+        if (mensajes.length == 0) {
+            guardadoPrincipal.classList.add ('guardadoVacio');
+            alertText('#alert', 'No hay mensajes disponibles...');
+        }
+        
     }
 
 //Boton para copiar las entradas de la barra lateral
