@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="areaPrincipal">
+            <div class="logoAlura">
+                <img class="logo" src="img/Logo.png" alt="Logo Alura">
+            </div>
+            <div class="textoDeEntrada">
+                <input class="caja-texto" id="mensajeParaEncriptar" type="text" name="MensajeEncriptar" placeholder="Mensaje">
+                <div class="botones">
+                    <button class="boton-encriptar" id="boton-encriptar">Encriptar</button>
+                    <button class="boton-desencriptar" id="boton-desencriptar">Desencriptar</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div  class="guardados">
+            <h2 class="mensajeAlerta" id="alert"></h2>
+            <div id="guadados-container">
+
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

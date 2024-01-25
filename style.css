@@ -1,0 +1,142 @@
+* {
+    font-family: Inter, sans-serif;
+}
+body {
+    background-color: #F3F5FC;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 60%;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0a387136;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0a387190;
+    transition: background-color 1s;
+}
+
+main {
+    display: flex;
+    padding: 40px 0;
+}
+
+.logo {
+    width: 15%;
+}
+
+.areaPrincipal {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 0 auto;
+/*    background-color: beige; */
+
+}
+
+.textoDeEntrada  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    margin: auto;
+    padding: 40px 0px 0px;
+   /* background-color: cadetblue; */
+}
+.caja-texto {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 32px;
+    color: #0A3871;
+    background-color: #eeeeee00;
+    outline: none;
+    border: 0;
+}
+.botones {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+/*    background-color: cornflowerblue; */
+}
+.boton-desencriptar, .boton-encriptar {
+    width: 328px;
+    height: 67px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 24px;
+    margin: 0 8px;
+}
+
+.boton-encriptar {
+    color: white;
+    background-color: #0A3871;
+}
+.boton-desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+.guardados {
+    width: 25%;
+    height: 85vh;
+    margin: 0 80px 0 0;
+    overflow: scroll;
+    background-color: rgb(255, 255, 255);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px #7c7c7c25;
+}
+
+.nuevaEntradaContenedor {
+    width: 75%;
+    padding: 10px 20px;
+    margin: 20px auto ;
+    background-color: azure;
+    border: 2px #0628ec3e solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.nuevaEntradaMensaje {
+    font-size: 20px;
+    color: #13519d;
+    padding: 5px;
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+}
+
+.botonEliminar, .botonDeCopiar {
+    width: 100px;
+    height: auto;
+    margin: 0 4px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #0A3871;
+    border: 0px;
+    border-radius: 15px;
+}
+
+.botonDeCopiar {
+    background-color: rgb(128, 217, 214);
+}
+
+.mensajeAlerta {
+    margin: 20px auto 10px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    color: #495057;
+    word-wrap: break-word;
+    
+}
+
+.disable {
+    display: none;
+}
