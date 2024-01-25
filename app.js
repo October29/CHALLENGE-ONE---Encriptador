@@ -6,12 +6,17 @@ const guardados = document.querySelector('#guadados-container');    //Declaracio
 const botonEncriptar = document.querySelector('#boton-encriptar');  //Declaracion - boton de encriptado
 const botonDesencriptar = document.querySelector('#boton-desencriptar');//Declaacion - boton desencriptar
 
-if (mensajes == false) {
-    guardadoPrincipal.classList.add ('guardadoVacio');
-    alertText('#alert', 'No hay mensajes disponibles...');
-} else if (mensajes == true) {
-    
+verificarMensajesEncriptados();
+
+//funcion mensajes de entrada 0
+function verificarMensajesEncriptados() {
+    if (mensajes.length == 0 || alertText('#text', '')) {
+        guardadoPrincipal.classList.add ('guardadoVacio');
+        alertText('#alert', 'No hay mensajes disponibles...');
+    } else {
+    }
 }
+
 
 //Boton para ENCRIPTAR mensajes ingresados en el campo de texto
 botonEncriptar.onclick = function validar(event){
@@ -102,11 +107,7 @@ function guardar() {
     eliminar.onclick = function eliminarEntrada (){
         nuevaEntradaContenedor.remove();
         mensajes.pop();
-        if (mensajes.length == 0) {
-            guardadoPrincipal.classList.add ('guardadoVacio');
-            alertText('#alert', 'No hay mensajes disponibles...');
-        }
-        
+        verificarMensajesEncriptados();
     }
 
 //Boton para copiar las entradas de la barra lateral
@@ -156,9 +157,11 @@ botonDesencriptar.onclick = function desencriptarEntrada(event){
                 mensajecodificado.splice([i+1],3);
             }
         }
+        alertText('#alert', mensajecodificado.join(''));
+        guardadoPrincipal.classList.remove ('guardadoVacio');
+
     }
-    alertText('#alert', mensajecodificado.join(''));
-    return
+
 }
 
 function alertasTemporales(mensaje){
