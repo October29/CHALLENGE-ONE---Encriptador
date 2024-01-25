@@ -36,20 +36,20 @@ main {
     width: 65%;
     margin: 0 auto;
 /*    background-color: beige; */
-
 }
 
 .textoDeEntrada  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: auto;
     height: 65vh;
     margin: auto;
     padding: 40px 0px 0px;
    /* background-color: cadetblue; */
 }
 .caja-texto {
-    width: 70%;
+    max-width: 70%;
     margin: 0 auto;
     font-size: 32px;
     color: #0A3871;
@@ -60,11 +60,12 @@ main {
 .botones {
     display: flex;
     justify-content: center;
+    width: auto;
     padding: 30px;
 /*    background-color: cornflowerblue; */
 }
 .boton-desencriptar, .boton-encriptar {
-    width: 328px;
+    min-width: 200px;
     height: 67px;
     font-size: 16px;
     border: 0;
@@ -85,6 +86,7 @@ main {
     width: 25%;
     height: 85vh;
     margin: 0 80px 0 0;
+    padding: 0 5px;
     overflow: scroll;
     background-color: rgb(255, 255, 255);
     border-radius: 32px;
@@ -112,9 +114,9 @@ main {
 .botonEliminar, .botonDeCopiar {
     width: 100px;
     height: auto;
-    margin: 0 4px;
-    padding: 10px;
-    font-size: 15px;
+    margin: 2px 4px;
+    padding: 7px 10px;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.5px;
     color: white;
@@ -130,13 +132,81 @@ main {
 .mensajeAlerta {
     margin: 20px auto 10px;
     padding: 20px;
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
     color: #495057;
     word-wrap: break-word;
     
 }
 
+.contenedorDeAlertas {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50vh;
+    right: 50vw;
+    width: 300px;
+    height: 50px;
+    background-color: #1b5398e6;
+    color: white;
+    border-radius: 25px;
+    animation: aparecer 1.5s ease-in-out, subir 1.5s ease-in-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 100;
+    }
+    90% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes subir {
+    0% {
+        top: 50vh;
+    }
+    100% {
+        top: 47vh;
+    }
+}
+
+.textoDeAlertas {
+    font-family: Inter, sans-serif;
+    text-align: center;
+    margin: auto;
+    font-size: 19px;
+    color: white;
+}
+
 .disable {
     display: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .areaPrincipal {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    /*    background-color: beige; */
+    }
+
+    .guardados {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        padding: 0 5px;
+    }
 }
