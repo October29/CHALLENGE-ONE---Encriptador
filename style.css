@@ -71,6 +71,7 @@ main {
     border: 0;
     border-radius: 24px;
     margin: 0 8px;
+    transition: 0.2s;
 }
 
 .boton-encriptar {
@@ -80,6 +81,27 @@ main {
 .boton-desencriptar {
     background-color: #D8DFE8;
     color: #0A3871;
+}
+.boton-encriptar:hover {
+    background-color: #1370bd;
+}
+.boton-encriptar:active {
+    width: 95px;
+    background-color: white;
+    color: #1370bd;
+    border: 1px #1370bd solid;
+    box-shadow: 3px 3px 5px #28517942;
+} 
+
+.boton-desencriptar:hover {
+    background-color: #a1aec0;
+}
+.boton-desencriptar:active {
+    width: 95px;
+    background-color: white;
+    color: #4c535e;
+    border: 1px #a1aec0 solid;
+    box-shadow: 3px 3px 5px #28517942;
 }
 
 .guardados {
@@ -129,10 +151,32 @@ main {
     background-color: #0A3871;
     border: 0px;
     border-radius: 15px;
+    transition: 0.2s;
+}
+
+.botonEliminar:hover {
+    background-color: #da5858;
+}
+.botonEliminar:active {
+    width: 95px;
+    background-color: white;
+    color: #da5858;
+    border: 1px #da5858 solid;
+    box-shadow: 3px 3px 5px #28517942;
 }
 
 .botonDeCopiar {
     background-color: rgb(128, 217, 214);
+}
+.botonDeCopiar:hover {
+    background-color: rgb(75, 204, 150);
+}
+.botonDeCopiar:active {
+    width: 95px;
+    background-color: white;
+    color: rgb(75, 204, 150);
+    border: 1px rgb(75, 204, 150) solid;
+    box-shadow: 3px 3px 5px #28517942;
 }
 
 .mensajeAlerta {
@@ -228,10 +272,33 @@ main {
         display: flex;
         align-items: center;
         position: absolute;
-        top: 50vh;
-        right: 20vw;
+        right: 30%;
     }
     .guardadoVacio {
         background-image: url(img/buho1-02-opacity-01.jpg);
+    }
+}
+
+@media (max-width: 390px) {
+    .areaPrincipal {
+        width: 100vw;
+    }
+    .textoDeEntrada {
+        width: 100vw;
+        height: 300px;
+    }
+    .caja-texto {
+        max-width: 70%;
+        margin: 0 auto;
+        font-size: 19px;
+    }
+    .boton-encriptar, .boton-desencriptar  {
+        min-width: 150px;
+    }
+    .contenedorDeAlertas {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 11%;
     }
 }
